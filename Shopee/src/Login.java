@@ -45,23 +45,20 @@ public class Login extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         panelBeranda = new javax.swing.JPanel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jUsername3 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jIsiUsernamefield3 = new javax.swing.JTextField();
-        jPasswordField4 = new javax.swing.JPasswordField();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        panelKeranjang = new javax.swing.JPanel();
+        jButton3 = new javax.swing.JButton();
+        jComboBox2 = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(545, 535));
 
-        jPanel3.setPreferredSize(new java.awt.Dimension(680, 535));
+        jPanel3.setPreferredSize(new java.awt.Dimension(545, 535));
         jPanel3.setLayout(new java.awt.CardLayout());
 
         panelLogin.setBackground(new java.awt.Color(204, 204, 255));
+        panelLogin.setPreferredSize(new java.awt.Dimension(545, 535));
 
         jLabel11.setFont(new java.awt.Font("Segoe Print", 1, 48)); // NOI18N
         jLabel11.setText("Welcome");
@@ -125,7 +122,7 @@ public class Login extends javax.swing.JFrame {
                             .addGroup(panelLoginLayout.createSequentialGroup()
                                 .addGap(99, 99, 99)
                                 .addComponent(jLabel12)))
-                        .addGap(0, 196, Short.MAX_VALUE))
+                        .addGap(0, 38, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelLoginLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -159,103 +156,80 @@ public class Login extends javax.swing.JFrame {
 
         jPanel3.add(panelLogin, "cardLogin");
 
-        panelBeranda.setBackground(new java.awt.Color(102, 255, 102));
+        panelBeranda.setBackground(new java.awt.Color(204, 204, 255));
+        panelBeranda.setPreferredSize(new java.awt.Dimension(545, 535));
 
-        jLabel15.setFont(new java.awt.Font("Segoe Print", 1, 48)); // NOI18N
-        jLabel15.setText("Welcome");
+        jButton2.setBackground(new java.awt.Color(204, 204, 255));
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/shopee/keranjang.png"))); // NOI18N
+        jButton2.setBorder(null);
 
-        jLabel16.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel16.setText("Please insert your Username and Password");
-
-        jUsername3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jUsername3.setText("Username");
-
-        jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel17.setText("Password");
-
-        jIsiUsernamefield3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jIsiUsernamefield3.setPreferredSize(new java.awt.Dimension(65, 35));
-
-        jPasswordField4.setPreferredSize(new java.awt.Dimension(65, 35));
-
-        jButton7.setText("Login");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Keyboard", "Mouse", "Mousepad" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                jComboBox1ActionPerformed(evt);
             }
         });
-
-        jButton8.setText("Register");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
-            }
-        });
-
-        jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel18.setText("If you don't have an account, please register");
-
-        jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel19.setText(" X");
 
         javax.swing.GroupLayout panelBerandaLayout = new javax.swing.GroupLayout(panelBeranda);
         panelBeranda.setLayout(panelBerandaLayout);
         panelBerandaLayout.setHorizontalGroup(
             panelBerandaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBerandaLayout.createSequentialGroup()
-                .addGroup(panelBerandaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelBerandaLayout.createSequentialGroup()
-                        .addGroup(panelBerandaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panelBerandaLayout.createSequentialGroup()
-                                .addGap(59, 59, 59)
-                                .addGroup(panelBerandaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jIsiUsernamefield3, javax.swing.GroupLayout.DEFAULT_SIZE, 419, Short.MAX_VALUE)
-                                    .addComponent(jUsername3)
-                                    .addComponent(jButton8)
-                                    .addComponent(jLabel18)
-                                    .addComponent(jLabel17)
-                                    .addComponent(jButton7)
-                                    .addComponent(jPasswordField4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addGroup(panelBerandaLayout.createSequentialGroup()
-                                .addGap(167, 167, 167)
-                                .addComponent(jLabel15))
-                            .addGroup(panelBerandaLayout.createSequentialGroup()
-                                .addGap(99, 99, 99)
-                                .addComponent(jLabel16)))
-                        .addGap(0, 196, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBerandaLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                .addGap(63, 63, 63)
+                .addComponent(jComboBox1, 0, 397, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(46, 46, 46))
         );
         panelBerandaLayout.setVerticalGroup(
             panelBerandaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBerandaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel19)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel16)
-                .addGap(26, 26, 26)
-                .addComponent(jUsername3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jIsiUsernamefield3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel17)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPasswordField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
-                .addComponent(jLabel18)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton8)
-                .addGap(79, 79, 79))
+                .addGap(12, 12, 12)
+                .addGroup(panelBerandaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jComboBox1)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(490, Short.MAX_VALUE))
         );
 
         jPanel3.add(panelBeranda, "cardBeranda");
+
+        panelKeranjang.setBackground(new java.awt.Color(204, 204, 255));
+        panelKeranjang.setPreferredSize(new java.awt.Dimension(545, 535));
+
+        jButton3.setBackground(new java.awt.Color(204, 204, 255));
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/shopee/keranjang.png"))); // NOI18N
+        jButton3.setBorder(null);
+
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Keyboard", "Mouse", "Mousepad" }));
+        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panelKeranjangLayout = new javax.swing.GroupLayout(panelKeranjang);
+        panelKeranjang.setLayout(panelKeranjangLayout);
+        panelKeranjangLayout.setHorizontalGroup(
+            panelKeranjangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelKeranjangLayout.createSequentialGroup()
+                .addGap(63, 63, 63)
+                .addComponent(jComboBox2, 0, 397, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(46, 46, 46))
+        );
+        panelKeranjangLayout.setVerticalGroup(
+            panelKeranjangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelKeranjangLayout.createSequentialGroup()
+                .addGap(12, 12, 12)
+                .addGroup(panelKeranjangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jComboBox2)
+                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(490, Short.MAX_VALUE))
+        );
+
+        jPanel3.add(panelKeranjang, "cardBeranda");
+        panelKeranjang.getAccessibleContext().setAccessibleParent(jPanel3);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -285,13 +259,13 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_jComboBox1ActionPerformed
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
+    }//GEN-LAST:event_jComboBox2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -329,28 +303,23 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JTextField jIsiUsernamefield2;
-    private javax.swing.JTextField jIsiUsernamefield3;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPasswordField jPasswordField3;
-    private javax.swing.JPasswordField jPasswordField4;
     private javax.swing.JLabel jUsername2;
-    private javax.swing.JLabel jUsername3;
     private javax.swing.JPanel panelBeranda;
+    private javax.swing.JPanel panelKeranjang;
     private javax.swing.JPanel panelLogin;
     // End of variables declaration//GEN-END:variables
 }
