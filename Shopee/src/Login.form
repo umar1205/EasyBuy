@@ -90,7 +90,7 @@
                               <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="44" max="32767" attributes="0"/>
+                      <EmptySpace pref="67" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -444,7 +444,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="136" max="-2" attributes="0"/>
-                              <Component id="jLabel2" pref="380" max="32767" attributes="0"/>
+                              <Component id="jLabel2" pref="403" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -623,7 +623,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-              <CardConstraints cardName="cardRegister"/>
+              <CardConstraints cardName="cardBerandaToko"/>
             </Constraint>
           </Constraints>
 
@@ -718,7 +718,6 @@
                   <Image iconType="3" name="/bar-chart.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Penghasilan"/>
-                <Property name="actionCommand" type="java.lang.String" value="Penghasilan"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton12">
@@ -739,7 +738,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-              <CardConstraints cardName="cardRegister"/>
+              <CardConstraints cardName="cardBarang"/>
             </Constraint>
           </Constraints>
 
@@ -853,7 +852,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-              <CardConstraints cardName="cardRegister"/>
+              <CardConstraints cardName="cardPenghasilan"/>
             </Constraint>
           </Constraints>
 

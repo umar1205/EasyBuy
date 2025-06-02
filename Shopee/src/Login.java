@@ -154,7 +154,7 @@ public class Login extends javax.swing.JFrame {
                     .addGroup(panelLoginLayout.createSequentialGroup()
                         .addGap(99, 99, 99)
                         .addComponent(jLabel12)))
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addContainerGap(67, Short.MAX_VALUE))
         );
         panelLoginLayout.setVerticalGroup(
             panelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -373,7 +373,7 @@ public class Login extends javax.swing.JFrame {
                 .addGroup(panelRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelRegisterLayout.createSequentialGroup()
                         .addGap(136, 136, 136)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE))
+                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 403, Short.MAX_VALUE))
                     .addGroup(panelRegisterLayout.createSequentialGroup()
                         .addGroup(panelRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(panelRegisterLayout.createSequentialGroup()
@@ -458,7 +458,6 @@ public class Login extends javax.swing.JFrame {
 
         jButton15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bar-chart.png"))); // NOI18N
         jButton15.setText("Penghasilan");
-        jButton15.setActionCommand("Penghasilan");
 
         jButton12.setText("LOG OUT");
 
@@ -499,7 +498,7 @@ public class Login extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel3.add(panelBerandaToko, "cardRegister");
+        jPanel3.add(panelBerandaToko, "cardBerandaToko");
 
         panelBarang.setBackground(new java.awt.Color(204, 204, 255));
         panelBarang.setPreferredSize(new java.awt.Dimension(545, 535));
@@ -565,7 +564,7 @@ public class Login extends javax.swing.JFrame {
                 .addContainerGap(201, Short.MAX_VALUE))
         );
 
-        jPanel3.add(panelBarang, "cardRegister");
+        jPanel3.add(panelBarang, "cardBarang");
 
         panelPenghasilan.setBackground(new java.awt.Color(204, 204, 255));
         panelPenghasilan.setPreferredSize(new java.awt.Dimension(545, 535));
@@ -632,7 +631,7 @@ public class Login extends javax.swing.JFrame {
                 .addContainerGap(337, Short.MAX_VALUE))
         );
 
-        jPanel3.add(panelPenghasilan, "cardRegister");
+        jPanel3.add(panelPenghasilan, "cardPenghasilan");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
