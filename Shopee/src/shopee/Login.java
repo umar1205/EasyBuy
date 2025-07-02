@@ -20,6 +20,7 @@ public class Login extends javax.swing.JFrame {
     int barang = 1;
     int hargaBaru = 0;
     int harga = 0;
+    int IDTransaksi = 1;
     
     /**
      * Creates new form Login
@@ -215,6 +216,7 @@ public class Login extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jButton16 = new javax.swing.JButton();
+        jLabel25 = new javax.swing.JLabel();
         panelPengiriman = new javax.swing.JPanel();
         jLabel151 = new javax.swing.JLabel();
         jButton49 = new javax.swing.JButton();
@@ -443,7 +445,7 @@ public class Login extends javax.swing.JFrame {
                                         .addGroup(panelBerandaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jLabel15))))))
-                        .addGap(0, 14, Short.MAX_VALUE))
+                        .addGap(0, 50, Short.MAX_VALUE))
                     .addGroup(panelBerandaLayout.createSequentialGroup()
                         .addComponent(jButton2)
                         .addGap(70, 70, 70)
@@ -805,7 +807,7 @@ public class Login extends javax.swing.JFrame {
         panelPenghasilan.setBackground(new java.awt.Color(204, 204, 255));
         panelPenghasilan.setPreferredSize(new java.awt.Dimension(545, 535));
 
-        jLabel22.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel22.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel22.setText("Penghasilan");
 
@@ -816,13 +818,13 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
-        jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel18.setText("Barang terjual : 1");
 
-        jLabel19.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel19.setText("Penghasilan : 300.000");
+        jLabel19.setText("Penghasilan : 300000");
 
         javax.swing.GroupLayout panelPenghasilanLayout = new javax.swing.GroupLayout(panelPenghasilan);
         panelPenghasilan.setLayout(panelPenghasilanLayout);
@@ -831,7 +833,7 @@ public class Login extends javax.swing.JFrame {
             .addGroup(panelPenghasilanLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(panelPenghasilanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, 516, Short.MAX_VALUE)
+                    .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, 539, Short.MAX_VALUE)
                     .addGroup(panelPenghasilanLayout.createSequentialGroup()
                         .addGroup(panelPenghasilanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1190,25 +1192,30 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
+        jLabel25.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel25.setText("Total Barang : 1");
+
         javax.swing.GroupLayout panelTransaksiLayout = new javax.swing.GroupLayout(panelTransaksi);
         panelTransaksi.setLayout(panelTransaksiLayout);
         panelTransaksiLayout.setHorizontalGroup(
             panelTransaksiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelTransaksiLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(panelTransaksiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane2)
-                    .addComponent(jLabel24, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelTransaksiLayout.createSequentialGroup()
-                        .addComponent(jButton48)
-                        .addGap(91, 91, 91)
-                        .addComponent(jLabel150, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 186, Short.MAX_VALUE)))
-                .addContainerGap())
             .addGroup(panelTransaksiLayout.createSequentialGroup()
                 .addGap(218, 218, 218)
                 .addComponent(jButton16)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelTransaksiLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelTransaksiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(panelTransaksiLayout.createSequentialGroup()
+                        .addComponent(jButton48)
+                        .addGap(91, 91, 91)
+                        .addComponent(jLabel150, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 163, Short.MAX_VALUE))
+                    .addComponent(jLabel25, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         panelTransaksiLayout.setVerticalGroup(
             panelTransaksiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1217,9 +1224,11 @@ public class Login extends javax.swing.JFrame {
                 .addGroup(panelTransaksiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButton48, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel150, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(48, 48, 48)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton16)
@@ -1247,11 +1256,11 @@ public class Login extends javax.swing.JFrame {
 
             },
             new String [] {
-                "ID Barang", "ID Transaksi", "Total Barang", "Alamat Tujuan"
+                "ID Transaksi", "Total Harga", "Alamat Tujuan"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false
+                false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -1652,9 +1661,9 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton28ActionPerformed
         // TODO add your handling code here:
-        String alamatTujuan = JOptionPane.showInputDialog(this, "Masukkan alamat tujuan", "Konfirmasi alamat", JOptionPane.QUESTION_MESSAGE);
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
         int kolomHarga = -1;
+        int kolomBarang = -1;
 
         // Cari index kolom "Total Harga"
         int pilihan = JOptionPane.showConfirmDialog(this, "Apakah ingin melakukan checkout sekarang?", "Konfirmasi", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
@@ -1662,7 +1671,9 @@ public class Login extends javax.swing.JFrame {
         for (int i = 0; i < model.getColumnCount(); i++) {
             if (model.getColumnName(i).equalsIgnoreCase("Total Harga")) {
                 kolomHarga = i;
-                break;
+            }
+            if (model.getColumnName(i).equalsIgnoreCase("Total Barang")) {
+                kolomBarang = i;
             }
         }
 
@@ -1670,16 +1681,25 @@ public class Login extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Kolom 'Total Harga' tidak ditemukan.", "Error", JOptionPane.ERROR_MESSAGE);
             return;
         }
+        
+        if (kolomBarang == -1) {
+            JOptionPane.showMessageDialog(this, "Kolom 'Total Barang' tidak ditemukan.", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
 
         int totalHarga = 0;
-
+        int totalBarang = 0;
         for (int i = 0; i < model.getRowCount(); i++) {
             String hargaStr = model.getValueAt(i, kolomHarga).toString().replace("Rp. ", "").replace(".", "").trim();
-    
+            String jmlBarang = model.getValueAt(i, kolomBarang).toString();
+            int barang = Integer.parseInt(jmlBarang);
+            totalBarang += barang;
             int harga = Integer.parseInt(hargaStr);
             totalHarga += harga;
         }
+        
         jLabel24.setText("Jumlah yang harus dibayar : Rp. " + totalHarga);
+        jLabel25.setText("Total Barang : " + totalBarang);
         cardLayout.show(jPanel3, "cardTransaksi");
         } else {
             JOptionPane.showMessageDialog(this, "Checkout dibatalkan", "Batal", JOptionPane.INFORMATION_MESSAGE);
@@ -1689,22 +1709,34 @@ public class Login extends javax.swing.JFrame {
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
         // TODO add your handling code here:
         String totalHargaStr = jLabel24.getText().replace("Jumlah yang harus dibayar : Rp. ", "").trim();
+        String totalBarangStr = jLabel25.getText().replace("Total Barang : ", "").trim();
+        String alamatTujuan = JOptionPane.showInputDialog(this, "Masukkan alamat tujuan", "Konfirmasi alamat", JOptionPane.QUESTION_MESSAGE);
         String jumlahBayarStr = JOptionPane.showInputDialog(this, "Masukkan jumlah yang ingin dibayar", "Konfirmasi pembayaran", JOptionPane.QUESTION_MESSAGE);
         if (jumlahBayarStr == null) {
             JOptionPane.showMessageDialog(this, "Dibatalkan", "Batal", JOptionPane.ERROR_MESSAGE);
             return;
         }
         try {
-        int totalHarga = Integer.parseInt(totalHargaStr);
-        int jumlahBayar = Integer.parseInt(jumlahBayarStr);
-        if(jumlahBayar == totalHarga || jumlahBayar > totalHarga) {
-            DefaultTableModel keranjang = (DefaultTableModel) jTable1.getModel();
-            keranjang.setRowCount(0);
-            JOptionPane.showMessageDialog(this, "Pembayaran berhasil", "Berhasil", JOptionPane.INFORMATION_MESSAGE);
-            cardLayout.show(jPanel3, "cardBeranda");
-        } else if(jumlahBayar < totalHarga) {
-            JOptionPane.showMessageDialog(this, "Nominal kurang. \nPembayaran dibatalkan", "Gagal", JOptionPane.ERROR_MESSAGE);
-        }
+            int totalHarga = Integer.parseInt(totalHargaStr);
+            int totalBarang = Integer.parseInt(totalBarangStr);
+            int jumlahBayar = Integer.parseInt(jumlahBayarStr);
+            int jumlahTotalHarga = 0;
+            int jumlahTotalBarang = 0;
+            if(jumlahBayar == totalHarga || jumlahBayar > totalHarga) {
+                DefaultTableModel keranjang = (DefaultTableModel) jTable1.getModel();
+                keranjang.setRowCount(0);
+                DefaultTableModel listPengiriman = (DefaultTableModel) jTable2.getModel();
+                listPengiriman.addRow(new Object[] {IDTransaksi, totalHarga, alamatTujuan});
+                IDTransaksi++;
+                jumlahTotalHarga = jumlahTotalHarga + totalHarga;
+                jumlahTotalBarang = jumlahTotalBarang + totalBarang;
+                jLabel19.setText("Penghasilan : " + jumlahTotalHarga);
+                jLabel18.setText("Barang terjual : " + jumlahTotalBarang);
+                JOptionPane.showMessageDialog(this, "Pembayaran berhasil", "Berhasil", JOptionPane.INFORMATION_MESSAGE);
+                cardLayout.show(jPanel3, "cardBeranda");
+            } else if(jumlahBayar < totalHarga) {
+                JOptionPane.showMessageDialog(this, "Nominal kurang. \nPembayaran dibatalkan", "Gagal", JOptionPane.ERROR_MESSAGE);
+            }
         } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(this, "Input tidak valid! \nMasukkan angka saja", "Error", JOptionPane.ERROR_MESSAGE);   
         }
@@ -1793,6 +1825,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
