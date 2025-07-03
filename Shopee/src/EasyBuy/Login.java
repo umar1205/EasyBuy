@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import javax.swing.JOptionPane;
 import java.awt.CardLayout;
 import java.io.*;
@@ -27,7 +28,7 @@ public class Login extends javax.swing.JFrame {
     int hargaBaru = 0;
     int harga = 0;
     int IDTransaksi = 1;
-    int ID_Akun_Pembeli = 2;
+    int ID_Akun_Pembeli = 1;
     int ID_Akun_Penjual = 1;    
     /**
      * Creates new form Login
@@ -133,21 +134,72 @@ public class Login extends javax.swing.JFrame {
 }
     
     public boolean cekUserAvail(String username) {
-        try (BufferedReader reader = new BufferedReader(new FileReader("registeredUser.txt"))) {
-        String line;
-        while ((line = reader.readLine()) != null) {
-            String[] parts = line.split("\\s*,\\s*");
-            if (parts.length >= 1) {
-                String usernameTerdaftar = parts[0];
-                if (username.equals(usernameTerdaftar)) {
-                    return true;
-                }
+        Connection conn = null;
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+        
+        try {
+            conn = KoneksiDB.getConnection();
+            String sql = "SELECT 1 FROM Akun_EasyBuyPenjual WHERE Username = ? " + "UNION " + "SELECT 1 FROM Akun_EasyBuyPembeli WHERE Username = ?";
+            stmt = conn.prepareStatement(sql);
+            stmt.setString(1, username);
+            stmt.setString(2, username);
+            
+            rs = stmt.executeQuery();
+            
+            if(rs.next()) {
+                return true;
+            }
+        } catch (Exception e) {
+            System.out.println("Gagal cek username: " + e.getMessage());
+        } finally {
+            try {
+                if (rs != null) rs.close();
+                if (stmt != null) stmt.close();
+                if (conn != null) conn.close();
+            } catch (Exception ex) {
+                ex.printStackTrace();
             }
         }
-    } catch (IOException e) {
-        System.out.println("Gagal cek username " + e.getMessage());
+        return false;
     }
-    return false;
+    
+    public int tambahIDAkunPembeli(Connection conn) {
+        int idBaru = 1;
+        try {
+            String sql = "SELECT MAX(ID_Akun_Pembeli) AS max_id FROM Akun_EasyBuyPembeli";
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+            
+            if (rs.next()) {
+                idBaru = rs.getInt("max_id") + 1;
+            }
+            
+            rs.close();
+            stmt.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return idBaru;
+    }
+    
+    public int tambahIDAkunPenjual(Connection conn) {
+        int idBaru = 1;
+        try {
+            String sql = "SELECT MAX(ID_Akun_Penjual) AS max_id FROM Akun_EasyBuyPenjual";
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+            
+            if (rs.next()) {
+                idBaru = rs.getInt("max_id") + 1;
+            }
+            
+            rs.close();
+            stmt.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return idBaru;
     }
     
     public int tambahBarang() {
@@ -1387,6 +1439,13 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        Connection conn = null;
+        try {
+            conn = KoneksiDB.getConnection();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return;
+        }
         String name = jTextField3.getText();
         String username = jTextField4.getText();
         String password = new String(jPasswordField1.getPassword());
@@ -1422,13 +1481,13 @@ public class Login extends javax.swing.JFrame {
             jPasswordField2.setText("");
         } else {
             if (role.equals("User")) {
+                int ID_Akun_Pembeli = tambahIDAkunPembeli(conn);
                 tambahUser(ID_Akun_Pembeli, username, password, role);
-                ID_Akun_Pembeli++;
                 JOptionPane.showMessageDialog(this, "Akun berhasil dibuat", "Berhasil", JOptionPane.INFORMATION_MESSAGE);
                 cardLayout.show(jPanel3, "cardLogin");
             } else if (role.equals("Toko")) {
+                int ID_Akun_Penjual = tambahIDAkunPenjual(conn);
                 tambahUserToko(ID_Akun_Penjual, username, password, role);
-                ID_Akun_Penjual++;
                 JOptionPane.showMessageDialog(this, "Akun berhasil dibuat", "Berhasil", JOptionPane.INFORMATION_MESSAGE);
                 cardLayout.show(jPanel3, "cardLogin");
             }
