@@ -1,3 +1,5 @@
+package EasyBuy;
+
 import javax.swing.JOptionPane;
 import java.awt.CardLayout;
 import java.io.*;
@@ -168,7 +170,6 @@ public class Login extends javax.swing.JFrame {
         jLabel21 = new javax.swing.JLabel();
         jButton17 = new javax.swing.JButton();
         jButton19 = new javax.swing.JButton();
-        jButton20 = new javax.swing.JButton();
         jButton18 = new javax.swing.JButton();
         jButton22 = new javax.swing.JButton();
         jButton23 = new javax.swing.JButton();
@@ -325,46 +326,42 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kok.png"))); // NOI18N
-        jButton4.setText("jButton4");
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EasyBuy/kok.png"))); // NOI18N
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
 
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mouse2.png"))); // NOI18N
-        jButton7.setText("jButton4");
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EasyBuy/mouse2.png"))); // NOI18N
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
             }
         });
 
-        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mouse.png"))); // NOI18N
-        jButton8.setText("jButton4");
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EasyBuy/mouse.png"))); // NOI18N
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton8ActionPerformed(evt);
             }
         });
 
-        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Screenshot 2025-06-02 024816.png"))); // NOI18N
-        jButton9.setText("jButton4");
+        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EasyBuy/Screenshot 2025-06-02 024816.png"))); // NOI18N
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton9ActionPerformed(evt);
             }
         });
 
-        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mousepad1.png"))); // NOI18N
+        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EasyBuy/mousepad1.png"))); // NOI18N
         jButton10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton10ActionPerformed(evt);
             }
         });
 
-        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mousepad.png"))); // NOI18N
+        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EasyBuy/mousepad.png"))); // NOI18N
         jButton11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton11ActionPerformed(evt);
@@ -393,14 +390,14 @@ public class Login extends javax.swing.JFrame {
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel17.setText("BERANDA");
 
-        jButton27.setText("Keranjang");
+        jButton27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EasyBuy/shopping-cart (1).png"))); // NOI18N
         jButton27.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton27ActionPerformed(evt);
             }
         });
 
-        jButton30.setText("Pengiriman");
+        jButton30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EasyBuy/express-delivery.png"))); // NOI18N
         jButton30.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton30ActionPerformed(evt);
@@ -445,41 +442,38 @@ public class Login extends javax.swing.JFrame {
                                         .addGroup(panelBerandaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jLabel15))))))
-                        .addGap(0, 50, Short.MAX_VALUE))
+                        .addGap(0, 27, Short.MAX_VALUE))
                     .addGroup(panelBerandaLayout.createSequentialGroup()
                         .addComponent(jButton2)
                         .addGap(70, 70, 70)
                         .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(panelBerandaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton30, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton30, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton27, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         panelBerandaLayout.setVerticalGroup(
             panelBerandaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBerandaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(panelBerandaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelBerandaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton2))
-                    .addGroup(panelBerandaLayout.createSequentialGroup()
-                        .addComponent(jButton27)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton30)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(panelBerandaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton2)
+                    .addComponent(jButton27)
+                    .addComponent(jButton30))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
                 .addGroup(panelBerandaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
                     .addComponent(jLabel15)
                     .addComponent(jLabel8))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelBerandaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton11, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(panelBerandaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBerandaLayout.createSequentialGroup()
+                        .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10))
+                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(panelBerandaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(jLabel10)
@@ -488,8 +482,8 @@ public class Login extends javax.swing.JFrame {
                 .addGroup(panelBerandaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                    .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27))
         );
 
         jPanel3.add(panelBeranda, "cardBeranda");
@@ -556,7 +550,7 @@ public class Login extends javax.swing.JFrame {
         panelRegisterLayout.setHorizontalGroup(
             panelRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRegisterLayout.createSequentialGroup()
-                .addGap(0, 113, Short.MAX_VALUE)
+                .addGap(0, 136, Short.MAX_VALUE)
                 .addGroup(panelRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelRegisterLayout.createSequentialGroup()
                         .addGroup(panelRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -630,7 +624,7 @@ public class Login extends javax.swing.JFrame {
         jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel20.setText("Beranda Toko");
 
-        jButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/product.png"))); // NOI18N
+        jButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EasyBuy/product.png"))); // NOI18N
         jButton14.setText("List Barang Toko");
         jButton14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -638,7 +632,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
-        jButton15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bar-chart.png"))); // NOI18N
+        jButton15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EasyBuy/bar-chart.png"))); // NOI18N
         jButton15.setText("Penghasilan");
         jButton15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -693,7 +687,7 @@ public class Login extends javax.swing.JFrame {
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel21.setText("List Barang");
 
-        jButton17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kok.png"))); // NOI18N
+        jButton17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EasyBuy/kok.png"))); // NOI18N
         jButton17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton17ActionPerformed(evt);
@@ -707,37 +701,35 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
-        jButton20.setText("TAMBAH");
-
-        jButton18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mousepad1.png"))); // NOI18N
+        jButton18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EasyBuy/mousepad1.png"))); // NOI18N
         jButton18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton18ActionPerformed(evt);
             }
         });
 
-        jButton22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mouse.png"))); // NOI18N
+        jButton22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EasyBuy/mouse.png"))); // NOI18N
         jButton22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton22ActionPerformed(evt);
             }
         });
 
-        jButton23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mousepad.png"))); // NOI18N
+        jButton23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EasyBuy/mousepad.png"))); // NOI18N
         jButton23.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton23ActionPerformed(evt);
             }
         });
 
-        jButton25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Screenshot 2025-06-02 024816.png"))); // NOI18N
+        jButton25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EasyBuy/Screenshot 2025-06-02 024816.png"))); // NOI18N
         jButton25.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton25ActionPerformed(evt);
             }
         });
 
-        jButton26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mouse2.png"))); // NOI18N
+        jButton26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EasyBuy/mouse2.png"))); // NOI18N
         jButton26.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton26ActionPerformed(evt);
@@ -754,22 +746,21 @@ public class Login extends javax.swing.JFrame {
                     .addGroup(panelListBarangLayout.createSequentialGroup()
                         .addComponent(jButton19)
                         .addGap(125, 125, 125)
-                        .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelListBarangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jButton20)
-                        .addGroup(panelListBarangLayout.createSequentialGroup()
-                            .addGroup(panelListBarangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton25, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(panelListBarangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton26, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(panelListBarangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jButton23, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(panelListBarangLayout.createSequentialGroup()
+                        .addGroup(panelListBarangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton25, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
+                        .addGroup(panelListBarangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton22, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton26, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(panelListBarangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton18, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton23, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(15, 15, 15))))
         );
         panelListBarangLayout.setVerticalGroup(
             panelListBarangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -781,14 +772,17 @@ public class Login extends javax.swing.JFrame {
                     .addGroup(panelListBarangLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel21)))
-                .addGap(26, 26, 26)
                 .addGroup(panelListBarangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelListBarangLayout.createSequentialGroup()
+                        .addGap(26, 26, 26)
                         .addGroup(panelListBarangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 1, Short.MAX_VALUE))
-                    .addComponent(jButton23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(panelListBarangLayout.createSequentialGroup()
+                                .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 1, Short.MAX_VALUE))
+                            .addComponent(jButton23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(panelListBarangLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelListBarangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButton18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -796,9 +790,7 @@ public class Login extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelListBarangLayout.createSequentialGroup()
                         .addComponent(jButton25, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 2, Short.MAX_VALUE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton20)
-                .addContainerGap())
+                .addGap(35, 35, 35))
         );
 
         jPanel3.add(panelListBarang, "cardListBarang");
@@ -862,7 +854,7 @@ public class Login extends javax.swing.JFrame {
         panelTemplatePembayaran.setBackground(new java.awt.Color(204, 204, 255));
         panelTemplatePembayaran.setPreferredSize(new java.awt.Dimension(545, 535));
 
-        jButton43.setText("+ Keranjang");
+        jButton43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EasyBuy/add-to-cart.png"))); // NOI18N
         jButton43.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton43ActionPerformed(evt);
@@ -870,7 +862,7 @@ public class Login extends javax.swing.JFrame {
         });
 
         jLabel132.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel132.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kok.png"))); // NOI18N
+        jLabel132.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EasyBuy/kok.png"))); // NOI18N
         jLabel132.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel133.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -921,7 +913,7 @@ public class Login extends javax.swing.JFrame {
         panelTemplatePembayaranLayout.setHorizontalGroup(
             panelTemplatePembayaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelTemplatePembayaranLayout.createSequentialGroup()
-                .addGap(0, 132, Short.MAX_VALUE)
+                .addGap(0, 155, Short.MAX_VALUE)
                 .addGroup(panelTemplatePembayaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel136, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel137, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1000,7 +992,7 @@ public class Login extends javax.swing.JFrame {
         });
 
         jLabel63.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel63.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kok.png"))); // NOI18N
+        jLabel63.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EasyBuy/kok.png"))); // NOI18N
         jLabel63.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel64.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -1030,7 +1022,7 @@ public class Login extends javax.swing.JFrame {
         panelTemplateDetailLayout.setHorizontalGroup(
             panelTemplateDetailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelTemplateDetailLayout.createSequentialGroup()
-                .addGap(0, 87, Short.MAX_VALUE)
+                .addGap(0, 110, Short.MAX_VALUE)
                 .addGroup(panelTemplateDetailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel66)
                     .addComponent(jLabel67, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1401,7 +1393,7 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
-        jLabel132.setIcon(new ImageIcon("Screenshot 2025-06-02 024816.png"));
+        jLabel132.setIcon(new ImageIcon(getClass().getResource("/EasyBuy/Screenshot 2025-06-02 024816.png")));
         jLabel132.setPreferredSize(new Dimension(184,204));
         jLabel134.setText("White Keyboard");
         jLabel133.setText("A2");
@@ -1412,7 +1404,7 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
-        jLabel132.setIcon(new ImageIcon("mouse.png"));
+        jLabel132.setIcon(new ImageIcon(getClass().getResource("/EasyBuy/mouse.png")));
         jLabel132.setPreferredSize(new Dimension(184,204));
         jLabel134.setText("Black Mouse");
         jLabel133.setText("B1");
@@ -1423,7 +1415,7 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         // TODO add your handling code here:
-        jLabel132.setIcon(new ImageIcon("mousepad1.png"));
+        jLabel132.setIcon(new ImageIcon(getClass().getResource("/EasyBuy/mousepad1.png")));
         jLabel132.setPreferredSize(new Dimension(184,204));
         jLabel134.setText("Pikachu Mousepad");
         jLabel133.setText("C2");
@@ -1452,7 +1444,7 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
         // TODO add your handling code here:
-        jLabel63.setIcon(new ImageIcon("mousepad1.png"));
+        jLabel63.setIcon(new ImageIcon(getClass().getResource("/EasyBuy/mousepad1.png")));
         jLabel63.setPreferredSize(new Dimension(184,204));
         jLabel65.setText("Pikachu Mousepad");
         jLabel64.setText("C2");
@@ -1462,7 +1454,7 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
         // TODO add your handling code here:
-        jLabel63.setIcon(new ImageIcon("mouse.png"));
+        jLabel63.setIcon(new ImageIcon(getClass().getResource("/EasyBuy/mouse.png")));
         jLabel63.setPreferredSize(new Dimension(184,204));
         jLabel65.setText("Black Mouse");
         jLabel64.setText("B1");
@@ -1472,7 +1464,7 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
         // TODO add your handling code here:
-        jLabel63.setIcon(new ImageIcon("mousepad.png"));
+        jLabel63.setIcon(new ImageIcon(getClass().getResource("/EasyBuy/mousepad.png")));
         jLabel63.setPreferredSize(new Dimension(184,204));
         jLabel65.setText("White Mousepad");
         jLabel64.setText("C1");
@@ -1482,7 +1474,7 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
         // TODO add your handling code here:
-        jLabel63.setIcon(new ImageIcon("Screenshot 2025-06-02 024816.png"));
+        jLabel63.setIcon(new ImageIcon(getClass().getResource("/EasyBuy/Screenshot 2025-06-02 024816.png")));
         jLabel63.setPreferredSize(new Dimension(184,204));
         jLabel65.setText("White Keyboard");
         jLabel64.setText("A2");
@@ -1492,7 +1484,7 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton26ActionPerformed
         // TODO add your handling code here:
-        jLabel63.setIcon(new ImageIcon("mouse2.png"));
+        jLabel63.setIcon(new ImageIcon(getClass().getResource("/EasyBuy/mouse2.png")));
         jLabel63.setPreferredSize(new Dimension(184,204));
         jLabel65.setText("Black Mouse Razer");
         jLabel64.setText("B2");
@@ -1502,7 +1494,7 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
         // TODO add your handling code here:
-        jLabel63.setIcon(new ImageIcon("kok.png"));
+        jLabel63.setIcon(new ImageIcon(getClass().getResource("/EasyBuy/kok.png")));
         jLabel63.setPreferredSize(new Dimension(184,204));
         jLabel65.setText("Rainbow Keyboard");
         jLabel64.setText("A1");
@@ -1512,7 +1504,7 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        jLabel132.setIcon(new ImageIcon("kok.png"));
+        jLabel132.setIcon(new ImageIcon(getClass().getResource("/EasyBuy/kok.png")));
         jLabel132.setPreferredSize(new Dimension(184,204));
         jLabel134.setText("Rainbow Keyboard");
         jLabel133.setText("A1");
@@ -1523,7 +1515,7 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
-        jLabel132.setIcon(new ImageIcon("mouse2.png"));
+        jLabel132.setIcon(new ImageIcon(getClass().getResource("/EasyBuy/mouse2.png")));
         jLabel132.setPreferredSize(new Dimension(184,204));
         jLabel134.setText("Black Mouse Razer");
         jLabel133.setText("B2");
@@ -1534,7 +1526,7 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         // TODO add your handling code here:
-        jLabel132.setIcon(new ImageIcon("mousepad.png"));
+        jLabel132.setIcon(new ImageIcon(getClass().getResource("/EasyBuy/mousepad.png")));
         jLabel132.setPreferredSize(new Dimension(184,204));
         jLabel134.setText("White Mousepad");
         jLabel133.setText("C1");
@@ -1711,6 +1703,10 @@ public class Login extends javax.swing.JFrame {
         String totalHargaStr = jLabel24.getText().replace("Jumlah yang harus dibayar : Rp. ", "").trim();
         String totalBarangStr = jLabel25.getText().replace("Total Barang : ", "").trim();
         String alamatTujuan = JOptionPane.showInputDialog(this, "Masukkan alamat tujuan", "Konfirmasi alamat", JOptionPane.QUESTION_MESSAGE);
+        if (alamatTujuan == null) {
+            JOptionPane.showMessageDialog(this, "Dibatalkan", "Batal", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
         String jumlahBayarStr = JOptionPane.showInputDialog(this, "Masukkan jumlah yang ingin dibayar", "Konfirmasi pembayaran", JOptionPane.QUESTION_MESSAGE);
         if (jumlahBayarStr == null) {
             JOptionPane.showMessageDialog(this, "Dibatalkan", "Batal", JOptionPane.ERROR_MESSAGE);
@@ -1771,7 +1767,6 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton22;
     private javax.swing.JButton jButton23;
     private javax.swing.JButton jButton24;

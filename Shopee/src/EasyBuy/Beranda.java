@@ -1,3 +1,5 @@
+package EasyBuy;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -47,7 +49,7 @@ public class Beranda extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(153, 102, 255));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/shopee/Search.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EasyBuy/Search.png"))); // NOI18N
         jButton1.setBorder(null);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -69,7 +71,7 @@ public class Beranda extends javax.swing.JFrame {
         );
 
         jButton2.setBackground(new java.awt.Color(153, 102, 255));
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/shopee/keranjang.png"))); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EasyBuy/keranjang.png"))); // NOI18N
         jButton2.setBorder(null);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
