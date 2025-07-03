@@ -1,5 +1,9 @@
 package EasyBuy;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import java.awt.CardLayout;
 import java.io.*;
@@ -23,7 +27,8 @@ public class Login extends javax.swing.JFrame {
     int hargaBaru = 0;
     int harga = 0;
     int IDTransaksi = 1;
-    
+    int ID_Akun_Pembeli = 2;
+    int ID_Akun_Penjual = 1;    
     /**
      * Creates new form Login
      */
@@ -33,55 +38,99 @@ public class Login extends javax.swing.JFrame {
         cardLayout.show(jPanel3, "cardLogin");
     }
     
-    public void tambahUser(String username, String password, Object role) {
-        File registeredUser = new File("registeredUser.txt");
-        try {
-            FileWriter write = new FileWriter(registeredUser, true);
-            BufferedWriter buff = new BufferedWriter(write);
+    public void tambahUser(int ID_Akun_Pembeli, String username, String password, Object role) {
+    try {
+        java.sql.Connection conn = KoneksiDB.getConnection();
+        String sql;
+        PreparedStatement stmt = null;
 
-            buff.write(username + ", " + password + ", " + role);
-            buff.newLine();
+        if (role.equals("User")) {
+            sql = "INSERT INTO Akun_EasyBuyPembeli (ID_Akun_Pembeli, Username, Password) VALUES (?, ?, ?)";
+            stmt = conn.prepareStatement(sql);
+            stmt.setInt(1, ID_Akun_Pembeli);
+            stmt.setString(2, username);
+            stmt.setString(3, password);
+            stmt.executeUpdate();
+            stmt.close();
+        }
 
-            buff.close(); // always close
-            System.out.println("User saved.");
-        } catch (IOException e) {
-            System.out.println("Error saving user: " + e.getMessage());
+        conn.close();
+
+    } catch (Exception e) {
+        e.printStackTrace();
+        JOptionPane.showMessageDialog(this, "Gagal menyimpan akun: " + e.getMessage());
+    }
+}
+    
+    public void tambahUserToko(int ID_Akun_Penjual, String username, String password, Object role) {
+    try {
+        java.sql.Connection conn = KoneksiDB.getConnection();
+        String sql;
+        PreparedStatement stmt = null;
+
+        if (role.equals("Toko")) {
+            sql = "INSERT INTO Akun_EasyBuyPenjual (ID_Akun_Penjual, Username, Password, List_Barang_Dijual) VALUES (?, ?, ?, ?)";
+            stmt = conn.prepareStatement(sql);
+            stmt.setInt(1, ID_Akun_Penjual);
+            stmt.setString(2, username);
+            stmt.setString(3, password);
+            stmt.setString(4, "");
+            stmt.executeUpdate();
+            stmt.close();
+        }
+
+        conn.close();
+
+    } catch (Exception e) {
+        e.printStackTrace();
+        JOptionPane.showMessageDialog(this, "Gagal menyimpan akun: " + e.getMessage());
         }
     }
     
-    public void cekUserLogin(String username, String password, Object role) {
-        boolean found = false;
-        try (BufferedReader read = new BufferedReader(new FileReader("registeredUser.txt"))) {
-            String line;
-            while ((line = read.readLine()) != null) {
-                String[] parts = line.split("\\s*,\\s*");
-                if (parts.length == 3) {
-                    String usernameTerdaftar = parts[0];
-                    String passwordTerdaftar = parts[1];
-                    String roleTerdaftar = parts[2];
-                    if (username.equals(usernameTerdaftar) && password.equals(passwordTerdaftar)) {
-                        found = true;
-                        
-                        if (roleTerdaftar.equals("User")) {
-                            JOptionPane.showMessageDialog(this, "Login Berhasil", "Berhasil", JOptionPane.INFORMATION_MESSAGE);
-                            cardLayout.show(jPanel3, "cardBeranda");
-                        } else if (roleTerdaftar.equals("Toko")) {
-                            JOptionPane.showMessageDialog(this, "Login Berhasil", "Berhasil", JOptionPane.INFORMATION_MESSAGE);
-                            cardLayout.show(jPanel3, "cardBerandaToko");
-                        }
-                    }
-                }
-            }
-            
-            if (!found) {
-                JOptionPane.showMessageDialog(this, "Username atau password salah!", "Error", JOptionPane.ERROR_MESSAGE);
-                jIsiUsernamefield2.setText("");
-                jPasswordField3.setText("");
-            }
-        } catch (IOException e) {
-            System.out.println("Gagal membaca user " + e.getMessage());
+    public void cekUserLogin(String username, String password) {
+    try {
+        Connection conn = KoneksiDB.getConnection();
+
+        // Cek ke tabel pembeli dulu
+        String sqlPembeli = "SELECT * FROM Akun_EasyBuyPembeli WHERE Username=? AND Password=?";
+        PreparedStatement stmtPembeli = conn.prepareStatement(sqlPembeli);
+        stmtPembeli.setString(1, username);
+        stmtPembeli.setString(2, password);
+
+        ResultSet rsPembeli = stmtPembeli.executeQuery();
+
+        if (rsPembeli.next()) {
+            JOptionPane.showMessageDialog(this, "Login berhasil sebagai Pembeli!");
+            cardLayout.show(jPanel3, "cardBeranda");
+            return;
         }
+
+        // Kalau tidak ditemukan di pembeli, cek ke penjual
+        String sqlPenjual = "SELECT * FROM Akun_EasyBuyPenjual WHERE Username=? AND Password=?";
+        PreparedStatement stmtPenjual = conn.prepareStatement(sqlPenjual);
+        stmtPenjual.setString(1, username);
+        stmtPenjual.setString(2, password);
+
+        ResultSet rsPenjual = stmtPenjual.executeQuery();
+
+        if (rsPenjual.next()) {
+            JOptionPane.showMessageDialog(this, "Login berhasil sebagai Penjual!");
+            cardLayout.show(jPanel3, "cardBerandaToko");
+        } else {
+            JOptionPane.showMessageDialog(this, "Username atau password salah!");
+        }
+
+        // Tutup semua koneksi
+        rsPembeli.close();
+        rsPenjual.close();
+        stmtPembeli.close();
+        stmtPenjual.close();
+        conn.close();
+
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(this, "Gagal login: " + e.getMessage());
     }
+}
     
     public boolean cekUserAvail(String username) {
         try (BufferedReader reader = new BufferedReader(new FileReader("registeredUser.txt"))) {
@@ -1319,7 +1368,7 @@ public class Login extends javax.swing.JFrame {
             jIsiUsernamefield2.setText("");
             jPasswordField3.setText("");
         } else {
-            cekUserLogin(username,password,role);
+            cekUserLogin(username,password);
         }
     }//GEN-LAST:event_jButton5ActionPerformed
 
@@ -1372,9 +1421,17 @@ public class Login extends javax.swing.JFrame {
             jPasswordField1.setText("");
             jPasswordField2.setText("");
         } else {
-            tambahUser(username, password, role);
-            JOptionPane.showMessageDialog(this, "Akun berhasil dibuat", "Berhasil", JOptionPane.INFORMATION_MESSAGE);
-            cardLayout.show(jPanel3, "cardLogin");
+            if (role.equals("User")) {
+                tambahUser(ID_Akun_Pembeli, username, password, role);
+                ID_Akun_Pembeli++;
+                JOptionPane.showMessageDialog(this, "Akun berhasil dibuat", "Berhasil", JOptionPane.INFORMATION_MESSAGE);
+                cardLayout.show(jPanel3, "cardLogin");
+            } else if (role.equals("Toko")) {
+                tambahUserToko(ID_Akun_Penjual, username, password, role);
+                ID_Akun_Penjual++;
+                JOptionPane.showMessageDialog(this, "Akun berhasil dibuat", "Berhasil", JOptionPane.INFORMATION_MESSAGE);
+                cardLayout.show(jPanel3, "cardLogin");
+            }
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
